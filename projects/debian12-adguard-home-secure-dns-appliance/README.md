@@ -77,17 +77,31 @@ This is designed as a **home network visibility and DNS control node**, not a ge
 
 # Architecture
 
-```text
-Devices
-   ↓
-Router DHCP gives DNS = AdGuard IP
-   ↓
-Debian 12 Laptop running AdGuard Home
-   ↓
-Quad9 DNS-over-HTTPS
-   ↓
-Internet
-```
+```mermaid
+graph LR
+    A[Devices<br/>Phones / Laptops / IoT] --> B[Router<br/>DHCP Server]
+    B --> C[AdGuard Home<br/>Debian 12 DNS Appliance]
+
+    C --> D[Quad9 DNS-over-HTTPS<br/>dns.quad9.net]
+    D --> E[Internet]
+
+    C --> F[DNS Query Log]
+    C --> G[Blocklists / Filtering Engine]
+````
+
+## System Flow
+
+Devices on the local network use the router for DHCP.
+The router forwards DNS requests to the AdGuard Home appliance.
+
+AdGuard Home provides:
+
+* DNS resolution for all LAN devices
+* Ad and tracker blocking via blocklists
+* Per-device query logging and visibility
+* Encrypted upstream DNS via Quad9 (DoH)
+
+
 
 Example static IP used in this guide:
 
