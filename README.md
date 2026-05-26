@@ -20,6 +20,16 @@ The documentation walks through complete deployment, configuration, hardening, a
 
 Documentation is written as a structured follow-along reference intended for reproducibility and long-term usability.
 
+### System Overview
+
+```mermaid
+graph LR
+    A[Home Network Devices] --> B[Debian 12 DNS Appliance]
+    B --> C[AdGuard Home]
+    C --> D[Quad9 DNS-over-HTTPS]
+    D --> E[Internet]
+```
+
 ---
 
 # Notes
