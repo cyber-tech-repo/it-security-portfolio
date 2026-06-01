@@ -1,44 +1,104 @@
 # IT & Cybersecurity Portfolio
+  
+Public portfolio of hands-on IT infrastructure, networking, systems administration, and cybersecurity projects.
 
-This repository contains a curated selection of public-facing technical projects, infrastructure notes, research, and documentation from ongoing personal lab work and self-hosted environments.
+This repository documents practical lab work focused on building, configuring, validating, troubleshooting, and securing self-hosted infrastructure. The projects are written to demonstrate real implementation experience across LAN/WAN networking, VLANs, DNS, DHCP, VPNs, Linux administration, firewall policy, monitoring, endpoint visibility, and security automation.
 
-Most work published here originates from larger private repositories and long-term learning projects. Public releases are selectively reviewed and sanitized prior to publication to remove sensitive information, environment-specific details, and operationally unsafe configurations where applicable.
+Most projects originate from larger private lab environments and are reviewed before publication to remove credentials, real network details, private keys, device identifiers, and unsafe operational configurations.
+  
+---
 
-The purpose of this repository is to document technical work in a structured, reproducible, and maintainable format while showcasing practical problem-solving, research, and operational workflow.
+## About Me
 
-Additional projects and documentation may be added over time as they are prepared for public release.
+I am an IT infrastructure and cybersecurity professional focused on infrastructure support, network administration, systems administration, and security operations.
+
+My background includes hands-on work with:
+
+- LAN/WAN/VLAN troubleshooting
+- Windows and Linux systems
+- DNS, DHCP, VPNs, routers, switches, and firewalls
+- Active Directory and endpoint administration
+- SIEM monitoring and alert investigation
+- Security-focused documentation and validation
+
+This portfolio supports my progression toward network administration, systems administration, security operations, and security engineering roles.
 
 ---
 
-# Current Project
+## Featured Projects
 
-## Debian 12 + AdGuard Home Deployment
+| Project | Focus Areas | Status |
+| --- | --- | --- |
+| [OpenWrt Network Segmentation and VPN Architecture](projects/openwrt-network-segmentation-vpn/) | VLANs, DHCP, wireless segmentation, guest/IoT isolation, firewall zones, WireGuard VPN routing | Published |
+| [Debian 12 + AdGuard Home Secure DNS Appliance](projects/debian12-adguard-home-secure-dns-appliance/) | Debian 12, AdGuard Home, DNS filtering, UFW hardening, Quad9 DNS-over-HTTPS | Published |
 
-Detailed deployment and configuration walkthrough for installing and configuring AdGuard Home on Debian 12 within a self-hosted environment.
+For the full project roadmap, see the [projects directory](projects/).
 
-The documentation walks through complete deployment, configuration, hardening, and operational management of a Debian-based AdGuard Home DNS appliance within a self-hosted environment.
+---
 
-Documentation is written as a structured follow-along reference intended for reproducibility and long-term usability.
-
-### System Overview
+## Technical Focus Areas
 
 ```mermaid
-graph LR
-    A[Home Network Devices] --> B[Debian 12 DNS Appliance]
-    B --> C[AdGuard Home]
-    C --> D[Quad9 DNS-over-HTTPS]
-    D --> E[Internet]
+flowchart LR
+
+    Support[IT Support]
+    Networking[Network Administration]
+    Systems[Systems Administration]
+    SecurityOps[Security Operations]
+    Engineering[Security Engineering]
+
+    Support --> Networking
+    Networking --> Systems
+    Systems --> SecurityOps
+    SecurityOps --> Engineering
 ```
 
----
+What This Portfolio Demonstrates
+--------------------------------
 
-# Notes
+This portfolio is designed to show practical ability in:
 
-Some documentation may intentionally omit:
-- credentials
-- internal network information
-- environment-specific identifiers
-- sensitive infrastructure details
-- unsafe or unnecessarily exposed configurations
+-   Building and documenting self-hosted infrastructure
+  
+-   Designing segmented network environments
+  
+-   Deploying Linux-based network services
+  
+-   Applying least-privilege and isolation concepts
+  
+-   Validating configurations through testing
+  
+-   Troubleshooting realistic infrastructure issues
+  
+-   Writing clear technical documentation for long-term maintainability
 
-All content is intended for educational, documentation, and portfolio purposes.
+Repository Structure
+--------------------
+
+    .
+    ├── README.md
+    └── projects/
+        ├── README.md
+        ├── openwrt-network-segmentation-vpn/
+        └── debian12-adguard-home-secure-dns-appliance/
+  
+
+Documentation and Sanitization
+------------------------------
+
+Public documentation is intentionally sanitized.
+
+This repository does not publish credentials, private keys, real SSIDs, real internal addressing, public IP addresses, MAC addresses, hostnames, exact hardware identifiers, or sensitive operational details.
+
+Example values are used where needed to preserve the technical design while keeping the public release safe.
+
+Profiles
+-------
+
+-   LinkedIn: https://www.linkedin.com/in/zachary-moseder
+  
+-   GitHub: https://www.github.com/cyber-tech-repo
+
+-   TryHackMe: https://www.tryhackme.com/p/zachary.techy
+
+-   CodeCademy: https://www.codecademy.com/profiles/zachary.techy
